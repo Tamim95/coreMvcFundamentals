@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<h3>@ViewBag.Message</h3>
+<p>There are @ViewBag.CustomerCount customers added into the list</p>
+<ul>
+    @foreach(var item in ViewBag.CustomerList)
+    {
+       <li> Id number : @item.Id -Name: @item.Name -Amount:@item.Amount </li>
+        
+    }
+
+</ul>
+<!-- 1st param: "ViewingDetails", 2nd param: "MethodName", 3rd Param:"ControllerName"-->
+@Html.ActionLink("Detils page for Asp.net here","Details","Customer") 
+<br />
+<a asp-controller="Customer" asp-action="Message">Message </a>
+<br/>
+<button type="button" asp-controller="Customer" asp-action="Message">Go Message Method</button>

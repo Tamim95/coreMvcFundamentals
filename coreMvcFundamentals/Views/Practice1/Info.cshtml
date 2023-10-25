@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "Info";
+}
+
+<h1>Info</h1>
+
+<h1>@ViewBag.Message</h1>
+@foreach (var item in ViewBag.UserList)
+
+{
+
+    <table class="table">
+        <thead>
+            <tr>
+           
+
+                <th>ID</th>
+                <th>NAME</th>
+                <th>AMOUNT</th>
+            
+            </tr>
+    </thead>
+       <tbody>
+        
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Amount</td>
+            </tr>
+
+     
+       </tbody>
+             
+                
+        
+    </table>
+
+    @* 
+ <li>Instructor Id:@item.Id</li>
+    <li>Instructor Name: @item.Name</li>
+    <li>Instructor Amount:@item.Amount</li>
+    *@
+    
+}
+<a asp-controller="Practice" asp-action="">Go CallMethod</a>
+
+
+

@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "CallMethod";
+}
+
+<h1>CallMethod</h1>
+@{
+    ViewBag.Name("Message");
+}
+<a asp-controller="Practice1" asp-action="CallMethod">Go To CallMethod</a>
+
+@*
+
+<!--For method two-->
+@{
+    TempData.Keep("Message");
+}
+<!-- For method  two-->
+<a asp-controller="Demo" asp-action="Method2">Go Method2</a>
+*@
+   
